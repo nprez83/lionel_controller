@@ -69,12 +69,14 @@ DEFAULT_RETRY_COUNT = 3
 # Enhanced announcement sounds with proper command structure
 ANNOUNCEMENTS = {
     "Random": {"code": 0x00, "name": "Random"},
-    "Ready to Roll": {"code": 0x01, "name": "Ready to Roll"},
-    "Hey There": {"code": 0x02, "name": "Hey There"},
-    "Squeaky": {"code": 0x03, "name": "Squeaky"},
-    "Water and Fire": {"code": 0x04, "name": "Water and Fire"},
-    "Fastest Freight": {"code": 0x05, "name": "Fastest Freight"},
-    "Penna Flyer": {"code": 0x06, "name": "Penna Flyer"},
+    "This is the Polar Express": {"code": 0x01, "name": "This is the Polar Express"},
+    "All aboard": {"code": 0x02, "name": "All aboard"},
+    "Well you coming": {"code": 0x03, "name": "Well, you coming"},
+    "Tickets tickets please": {"code": 0x04, "name": "Tickets, tickets please"},
+    "The first gift of Christmas": {"code": 0x05, "name": "The first gift of Christmas"},
+    "I'm the king of the North Pole": {"code": 0x06, "name": "I'm the king of the North Pole"},
+    "Test1": {"code": 0x07, "name": "Test1"},
+    "Test2": {"code": 0x08, "name": "Test2"},
 }
 
 # Command building helper functions
