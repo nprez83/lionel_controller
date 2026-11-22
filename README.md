@@ -1,6 +1,4 @@
-## This was an exercise in Github Copilot AI coding. The entire integration was created and coded by Copilot using prompts. 
-<strike>### This integration will be made public and archived, so that someone else may fork and expand on this</strike>
-Unarchived because I am a completionist.  
+## This is a fork from @iamjoshk lionel_controller modified to work with the Polar Express, which has different volume limits, different phrases, and also to include the missing smoke button.   
 
 ---
 # Lionel Train Controller
@@ -13,6 +11,7 @@ A Home Assistant custom integration for controlling Lionel LionChief Bluetooth l
 - **Direction Control**: Switch between forward and reverse
 - **Sound Effects**: Control horn, bell, and announcements  
 - **Lighting**: Train lights control
+- **Smoke**: Train smokes control
 - **Volume Controls**: Individual volume control for horn, bell, speech, and engine sounds
 - **Connection Status**: Monitor Bluetooth connection status
 - **Auto-Discovery**: Automatically discover locomotives when powered on
@@ -23,13 +22,14 @@ A Home Assistant custom integration for controlling Lionel LionChief Bluetooth l
 ### Number Entities
 - **Throttle**: Variable speed control slider from 0-100%
 - **Master Volume**: Overall volume control (0-7)
-- **Horn Volume**: Horn sound volume (0-7)
-- **Bell Volume**: Bell sound volume (0-7)
-- **Speech Volume**: Announcement volume (0-7)
-- **Engine Volume**: Engine sound volume (0-7)
+- **Horn Volume**: Horn sound volume (0-14)
+- **Bell Volume**: Bell sound volume (0-14)
+- **Speech Volume**: Announcement volume (0-14)
+- **Engine Volume**: Engine sound volume (0-14)
 
 ### Switch Entities  
 - **Lights**: Control locomotive lighting (defaults to on)
+- **Smoke**: Control locomotive smoke (defaults to on)
 - **Horn**: Turn horn sound on/off
 - **Bell**: Turn bell sound on/off
 
@@ -39,8 +39,8 @@ A Home Assistant custom integration for controlling Lionel LionChief Bluetooth l
 - **Reverse**: Set locomotive direction to reverse
 - **Disconnect**: Disconnect from locomotive
 - **Announcements**: Various conductor announcements
-  - Random, Ready to Roll, Hey There, Squeaky
-  - Water and Fire, Fastest Freight, Penna Flyer
+  - Random, Well you coming, All aboard, This is the Polar Express
+  - Tickets tickets please, The first gift of Christmas, I'm the king of the North Pole
 
 ### Binary Sensor
 - **Connection**: Shows Bluetooth connection status
@@ -51,7 +51,7 @@ A Home Assistant custom integration for controlling Lionel LionChief Bluetooth l
 1. Open HACS in Home Assistant
 2. Go to "Integrations"
 3. Click the three dots menu and select "Custom repositories"
-4. Add `https://github.com/iamjoshk/lionel_controller` as an Integration
+4. Add `https://github.com/nprez83/lionel_controller` as an Integration
 5. Install "Lionel Train Controller"
 6. Restart Home Assistant
 
@@ -144,6 +144,7 @@ Different locomotive models may use different service UUIDs. If the default does
 
 ## Credits
 
-- Protocol reverse engineering by [Property404](https://github.com/Property404/lionchief-controller)
+- Original lionel controller by [@iamjoshk](https://github.com/iamjoshk/lionel_controller)
 - ESPHome reference implementation by [@iamjoshk](https://github.com/iamjoshk/home-assistant-collection/tree/main/ESPHome/LionelController)
+- Protocol reverse engineering by [Property404](https://github.com/Property404/lionchief-controller)
 - Additional protocol details from [pedasmith's BluetoothDeviceController](https://github.com/pedasmith/BluetoothDeviceController/blob/main/BluetoothProtocolsDevices/Lionel_LionChief.cs)
