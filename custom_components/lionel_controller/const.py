@@ -76,8 +76,6 @@ ANNOUNCEMENTS = {
     "Tickets tickets please": {"code": 0x04, "name": "Tickets, tickets please"},
     "The first gift of Christmas": {"code": 0x05, "name": "The first gift of Christmas"},
     "I'm the king of the North Pole": {"code": 0x06, "name": "I'm the king of the North Pole"},
-    "Test1": {"code": 0x07, "name": "Test1"},
-    "Test2": {"code": 0x08, "name": "Test2"},
 }
 
 # Command building helper functions
