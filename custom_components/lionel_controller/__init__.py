@@ -135,10 +135,10 @@ class LionelTrainCoordinator:
         
         # Advanced feature state tracking
         self._master_volume = 5  # Default mid-range volume
-        self._horn_volume = 5
-        self._bell_volume = 5
-        self._speech_volume = 5
-        self._engine_volume = 5
+        self._horn_volume = 12
+        self._bell_volume = 12
+        self._speech_volume = 12
+        self._engine_volume = 12
         self._horn_pitch = 0
         self._bell_pitch = 0
         self._speech_pitch = 0
@@ -200,22 +200,22 @@ class LionelTrainCoordinator:
 
     @property
     def horn_volume(self) -> int:
-        """Return horn volume (0-7)."""
+        """Return horn volume (0-14)."""
         return self._horn_volume
 
     @property
     def bell_volume(self) -> int:
-        """Return bell volume (0-7)."""
+        """Return bell volume (0-14)."""
         return self._bell_volume
 
     @property
     def speech_volume(self) -> int:
-        """Return speech volume (0-7)."""
+        """Return speech volume (0-14)."""
         return self._speech_volume
 
     @property
     def engine_volume(self) -> int:
-        """Return engine volume (0-7)."""
+        """Return engine volume (0-14)."""
         return self._engine_volume
 
     @property
@@ -692,8 +692,8 @@ class LionelTrainCoordinator:
 
     async def async_set_sound_volume(self, sound_source: int, volume: int, pitch: int = None) -> bool:
         """Set volume and optionally pitch for specific sound source."""
-        if not 0 <= volume <= 7:
-            raise ValueError("Volume must be between 0 and 7")
+        if not 0 <= volume <= 14:
+            raise ValueError("Volume must be between 0 and 14")
         if pitch is not None and not -2 <= pitch <= 2:
             raise ValueError("Pitch must be between -2 and 2")
         
