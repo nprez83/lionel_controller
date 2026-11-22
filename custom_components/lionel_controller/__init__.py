@@ -130,6 +130,7 @@ class LionelTrainCoordinator:
         self._speed = 0
         self._direction_forward = True
         self._lights_on = True  # Default to on since locomotive lights are on when reconnected
+        self._smoke_on = True  # Default to on since locomotive smoke is on when reconnected
         self._horn_on = False
         self._bell_on = False
         
@@ -143,8 +144,6 @@ class LionelTrainCoordinator:
         self._bell_pitch = 0
         self._speech_pitch = 0
         self._engine_pitch = 0
-        
-        self._smoke_on = False
         
         # Device information
         self._model_number = None
